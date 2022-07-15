@@ -26,7 +26,7 @@ const features = Array.apply(null, Array(8)).map(function (x, i) {
 export default function About() {
   return (
 <>
-    <Container maxW={'5xl'}>
+    <Container maxW={'5xl'} pt={100}>
       <Stack
         textAlign={'center'}
         align={'center'}

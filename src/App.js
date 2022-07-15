@@ -17,6 +17,10 @@ import About from './Pages/About';
 import SignInPage from './Pages/SignInPage';
 import ForgetPassword from './Pages/ForgetPassword';
 import ContactPage from './component/ContactPage';
+import Peoples from './Pages/Peoples';
+import Trainers from './Pages/Trainers';
+import Cources from './Pages/Cources';
+
 
 
 function App() {
@@ -32,7 +36,11 @@ function App() {
   <Route exact path="/SignInPage" element={<SignInPage />} />
   <Route exact path="/ForgetPassword" element={<ForgetPassword />} />
   <Route exact path="/ContactPage" element={<ContactPage />} />
+  <Route exact path="/Peoples" element={<Peoples />} />
+  <Route exact path="/Trainers" element={<Trainers />} />
+  <Route exact path="/Cources" element={<Cources />} />
 
+  
 </Routes>
 
 <Footer/>

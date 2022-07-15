@@ -9,12 +9,12 @@ import {
   VisuallyHidden,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { ReactNode } from 'react';
+
 // import AppStoreBadge from '@/components/AppStoreBadge';
 // import PlayStoreBadge from '@/components/PlayStoreBadge';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
-const SocialButton = ({ children, label, href }: { children: ReactNode, label: string, href: string }) => {
+const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
@@ -38,7 +38,7 @@ const SocialButton = ({ children, label, href }: { children: ReactNode, label: s
   );
 };
 
-const ListHeader = ({ children }: { children: ReactNode }) => {
+const ListHeader = ({ children }) => {
   return (
     <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
@@ -69,17 +69,17 @@ export default function Footer() {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Who we Are</ListHeader>
-            <Link to='/'>About us</Link>
-            <Link href={'/'}>Our Teams</Link>
-            <Link href={'#'}>Fitness Trainer</Link>
+            <Link to='/About'>About us</Link>
+            <Link href={'/Peoples'}>Our Teams</Link>
+            <Link href={'/Trainers'}>Fitness Trainer</Link>
             <Link to='../contactUs'>Contact us</Link>
             <Link href={'#'}>Policies</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Get Involved</ListHeader>
-            <Link href={'#'}>Partner with us</Link>
-            <Link href={'#'}>Pricing</Link>
-            <Link href={'#'}>Touch with Trainer</Link>
+            <Link href={'/Cources'}>Cources</Link>
+            <Link href={'/Pricing'}>Pricing</Link>
+            <Link href={'/Trainers'}>Touch with Trainer</Link>
             <Link href={'#'}>Partner with us</Link>
           </Stack>
           <Stack align={'flex-start'}>
