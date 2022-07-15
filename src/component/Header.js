@@ -289,14 +289,14 @@ import {
       href: '/',
       children: [
         {
-          label: 'Explore Design Work',
+          label: 'Cources',
           subLabel: 'Trending Design to inspire you',
-          href: '/',
+          href: '/Cources',
         },
         {
-          label: 'New & Noteworthy',
+          label: 'Pricing',
           subLabel: 'Up-and-coming Designers',
-          href: '/',
+          href: '/Pricing',
         },
       ],
     },
@@ -321,7 +321,11 @@ import {
       href: '/About',
     },
     {
-      label: 'Touch trainers',
-      href: '/',
+      label: 'Touch Trainers',
+      href: '/Trainers',
+    },
+    {
+      label: 'Contact Us',
+      href: '/ContactPage',
     },
   ];

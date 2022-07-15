@@ -65,7 +65,7 @@ import React ,{useState} from 'react';
                 bgClip="text">
                 &
               </Text>{' '}
-              whenever you want across any of our 5,500+ partner gyms and fitness
+              whenever you want across any of our 5,500+ partner 
             </Heading>
             <Stack direction={'row'} spacing={4} align={'center'}>
               <AvatarGroup>
@@ -210,6 +210,7 @@ import React ,{useState} from 'react';
                   Upload Image
                 </Button>
               </Stack>
+              
               <Button
                 fontFamily={'heading'}
                 mt={8}
@@ -224,7 +225,7 @@ import React ,{useState} from 'react';
               </Button>
               <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link href='/SignInPage' color={'blue.400'}>Login</Link>
+                Already a user? <Link  href='/SignInPage' color={'blue.400'}>Login</Link>
               </Text>
             </Stack>
             </Box>
