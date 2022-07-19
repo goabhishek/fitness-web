@@ -3,7 +3,7 @@ import {
     Flex,
     Text,
     IconButton,
-    Button,
+    leftIcon,
     Stack,
     Collapse,
     Icon,
@@ -17,12 +17,16 @@ import {
     Container,
     Image,
   } from '@chakra-ui/react';
+  import {EmailIcon } from '@chakra-ui/icons';
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+// import IosApp from './IosApp';
+// import AndroidApp from './AndroidApp';
+import ButtonOn from './ButtonOn';
 
   
   export default function Header() {
@@ -35,7 +39,7 @@ import {
       >
 
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue('gray.100', 'gray.800')}
           color={useColorModeValue('white.600', 'pink.300')}
           minH={'80px'}
           py={{ base: 4 }}
@@ -69,11 +73,11 @@ import {
               color={useColorModeValue('white', 'white')}>
               <Link to='/' >
               <Image
-            width={10}
+            width={150}
             rounded={'md'}
             alt={'feature image'}
             src={
-              'https://res.cloudinary.com/mabhi8251/image/upload/v1657780527/Gloitel-fitness/favicon_uet7jg.jpg'
+              'https://res.cloudinary.com/mabhi8251/image/upload/v1658223785/Gloitel-fitness/Gloitel_logo_transperent_-_Bold_sf2hi2.png'
             }
           />
        
@@ -88,25 +92,18 @@ import {
           </Container>
           <Stack
             flex={{ base: 1, md: 0 }}
-            // justify={'flex-end'}
-            justify={'flex-start'}
+            justify={'flex-end'}
+            // justify={'flex-start'}
             direction={'row'}
             spacing={10}
             >
+              <ButtonOn  name="Download App Store" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8"/>
+              <ButtonOn leftIcon={<EmailIcon />} name="Get on Goole Play" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8"/>
              
-            <Button
-              as={'a'}
-              fontSize={'l'}
-              fontWeight={1000}
-              // variant={'link'}
-              color={'black.400'}
-              href={'/SignInPage'}
-              _hover={{
-                bg: 'pink.300',
-              }}>
-              Sign In
-            </Button>
-            <Button
+          
+             {/* <IosApp/> */}
+            {/* </Button> */}
+            {/* <Button
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'m'}
               fontWeight={600}
@@ -116,9 +113,9 @@ import {
               href={'/SignUpPage'}
               _hover={{
                 bg: 'gray.500',
-              }}>
-              Sign Up
-            </Button>
+              }}> */}
+             {/* <AndroidApp/> */}
+            {/* </Button> */}
           </Stack>
         </Flex>
      
