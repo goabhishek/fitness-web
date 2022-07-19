@@ -24,23 +24,23 @@ import React ,{useState} from 'react';
   const avatars = [
     {
       name: 'Ryan Florence',
-      url: 'https://bit.ly/ryan-florence',
+      url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
     },
     {
       name: 'Segun Adebayo',
-      url: 'https://bit.ly/sage-adebayo',
+      url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
     },
     {
       name: 'Kent Dodds',
-      url: 'https://bit.ly/kent-c-dodds',
+      url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
     },
     {
       name: 'Prosper Otemuyiwa',
-      url: 'https://bit.ly/prosper-baba',
+      url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
     },
     {
       name: 'Christian Nwamba',
-      url: 'https://bit.ly/code-beast',
+      url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
     },
   ];
   
@@ -65,7 +65,12 @@ import React ,{useState} from 'react';
                 bgClip="text">
                 &
               </Text>{' '}
-              whenever you want across any of our 5,500+ partner 
+              whenever you 
+              <Text
+                as={'span'}
+                bgGradient="linear(to-r, red.400,pink.400)"
+                bgClip="text">
+              want across any </Text>of our 5,500+ partner 
             </Heading>
             <Stack direction={'row'} spacing={4} align={'center'}>
               <AvatarGroup>
@@ -83,7 +88,7 @@ import React ,{useState} from 'react';
                       height: 'full',
                       rounded: 'full',
                       transform: 'scale(1.125)',
-                      bgGradient: 'linear(to-bl, red.400,pink.400)',
+                      bgGradient: 'linear(to-bl, red.200,pink.70)',
                       position: 'absolute',
                       zIndex: -1,
                       top: 0,

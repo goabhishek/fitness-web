@@ -26,23 +26,23 @@ import React ,{useState} from 'react';
 const avatars = [
   {
     name: 'Ryan Florence',
-    url: 'https://bit.ly/ryan-florence',
+    url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
   },
   {
     name: 'Segun Adebayo',
-    url: 'https://bit.ly/sage-adebayo',
+    url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
   },
   {
     name: 'Kent Dodds',
-    url: 'https://bit.ly/kent-c-dodds',
+    url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
   },
   {
     name: 'Prosper Otemuyiwa',
-    url: 'https://bit.ly/prosper-baba',
+    url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
   },
   {
     name: 'Christian Nwamba',
-    url: 'https://bit.ly/code-beast',
+    url: 'https://res.cloudinary.com/mabhi8251/image/upload/v1657962931/Gloitel-fitness/Amit_hzyvwk.jpg',
   },
 ];
 
