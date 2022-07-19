@@ -24,7 +24,7 @@ import {
   IoSearchSharp,
 } from 'react-icons/io5';
 import DownloadApp from '../component/Download';
-
+ 
 
 interface FeatureProps {
   text: string;
@@ -105,7 +105,7 @@ export default function Home() {
       w={'full'}
       h={'100vh'}
       backgroundImage={
-        'url(https://res.cloudinary.com/mabhi8251/image/upload/v1657696029/Gloitel-fitness/Layer_14_qeaxvc.png)'
+        'url(https://res.cloudinary.com/mabhi8251/image/upload/v1657883201/Gloitel-fitness/frontpage_gnsahu.jpg)'
       }
       backgroundSize={'cover'}
       backgroundPosition={'center center'}>

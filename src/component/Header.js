@@ -35,10 +35,10 @@ import {
       >
 
         <Flex
-          // bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('white.600', 'pink.300')}
-          minH={'60px'}
-          py={{ base: 10 }}
+          minH={'80px'}
+          py={{ base: 4 }}
           px={{ base: 4 }}
           w={'full'}
           position={'fixed'}
@@ -96,7 +96,7 @@ import {
              
             <Button
               as={'a'}
-              fontSize={'m'}
+              fontSize={'l'}
               fontWeight={1000}
               // variant={'link'}
               color={'black.400'}
