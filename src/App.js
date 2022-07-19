@@ -20,6 +20,9 @@ import ContactPage from './component/ContactPage';
 import Peoples from './Pages/Peoples';
 import Trainers from './Pages/Trainers';
 import Cources from './Pages/Cources';
+import IosApp from './component/IosApp';
+import AndroidApp from './component/AndroidApp';
+import ButtonOn from './component/ButtonOn';
 
 
 
@@ -39,6 +42,9 @@ function App() {
   <Route exact path="/Peoples" element={<Peoples />} />
   <Route exact path="/Trainers" element={<Trainers />} />
   <Route exact path="/Cources" element={<Cources />} />
+  <Route exact path="/IosApp" element={<IosApp />} />
+  <Route exact path="/AndroidApp" element={<AndroidApp />} />
+  <Route exact path="/ButtonOn" element={<ButtonOn />} />
 
   
 </Routes>

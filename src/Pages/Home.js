@@ -4,7 +4,7 @@ import {
   Flex,
   Button,
   Text,
-  VStack,
+
   useBreakpointValue,
   Container,
   Box,
@@ -23,7 +23,8 @@ import {
   IoLogoBitcoin,
   IoSearchSharp,
 } from 'react-icons/io5';
-import DownloadApp from '../component/Download';
+import ButtonOn from '../component/ButtonOn';
+
  
 
 interface FeatureProps {
@@ -101,48 +102,62 @@ export default function Home() {
 
   return (
     <>
-    <Flex
-      w={'full'}
-      h={'100vh'}
-      backgroundImage={
-        'url(https://res.cloudinary.com/mabhi8251/image/upload/v1657883201/Gloitel-fitness/frontpage_gnsahu.jpg)'
-      }
-      backgroundSize={'cover'}
-      backgroundPosition={'center center'}>
-      <VStack
-        w={'full'}
-        justify={'center'}
-        px={useBreakpointValue({ base: 4, md: 8 })}
-        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-        <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
-          <Text
-            color={'white'}
-            fontWeight={700}
-            lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-            eiusmod tempor
+    <Stack  minH={'100vh'} direction={{ base: 'column', md: 'row' }} >
+      <Flex  p={8} flex={1} align={'center'} justify={'center'} mt={10}>
+        <Stack mt={10} spacing={6} w={'full'} maxW={'lg'}>
+          <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+            <Text
+              as={'span'}
+              // position={'relative'}/
+              _after={{
+                content: "''",
+                width: 'full',
+                height: useBreakpointValue({ base: '20%', md: '30%' }),
+                position: 'absolute',
+                bottom: 1,
+                left: 0,
+                bg: 'blue.400',
+                zIndex: -1,
+              }}>
+              Your Fitness
+            </Text>
+            <br />{' '}
+            <Text color={'blue.400'} as={'span'}>
+            Meet the All-New
+            </Text>{' '}
+          </Heading>
+          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
+            The project board is an exclusive resource for contract work. It's
+            perfect for freelancers, agencies, and moonlighters.
           </Text>
-          <DownloadApp/>
-          <Stack direction={'row'}>
-            <Button
+          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
+
+            <ButtonOn name="Contact With Us" link="/ContactPage"/>
+            {/* <Button
+              rounded={'full'}
               bg={'blue.400'}
-              rounded={'full'}
               color={'white'}
-              _hover={{ bg: 'blue.500' }}>
-              Show me more
-            </Button>
-            <Button
-              bg={'whiteAlpha.300'}
-              rounded={'full'}
-              color={'white'}
-              _hover={{ bg: 'whiteAlpha.500' }}>
-              Show me more
-            </Button>
+              _hover={{
+                bg: 'blue.500',
+              }}>
+              Create Project
+            </Button> */}
+        
+            {/* <Button rounded={'full'}>How It Works</Button> */}
           </Stack>
         </Stack>
-      </VStack>
-    </Flex>
+      </Flex>
+      <Flex flex={1}>
+        <Image
+          alt={'Login Image'}
+            height={800}
+          src={
+            'https://res.cloudinary.com/mabhi8251/image/upload/v1658228888/Gloitel-fitness/01_preview1_siltyd.png'
+          }
+        />
+      </Flex>
+    </Stack>
+ 
 
 <Container maxW={'3xl'}>
 <Stack
