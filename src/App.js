@@ -5,8 +5,6 @@ import {
   Route,
 } from "react-router-dom";
 
-
-
 import Home from './Pages/Home';
 import { ChakraProvider } from "@chakra-ui/react"
 import Header from './component/Header';
@@ -23,9 +21,10 @@ import Cources from './Pages/Cources';
 import IosApp from './component/IosApp';
 import AndroidApp from './component/AndroidApp';
 import ButtonOn from './component/ButtonOn';
-
-
-
+import AppButton from './component/AppButton';
+import Input from './component/Input';
+import Getapppage from './component/Getapppage';
+                                                                          
 function App() {
   return (
 <ChakraProvider>
@@ -45,8 +44,10 @@ function App() {
   <Route exact path="/IosApp" element={<IosApp />} />
   <Route exact path="/AndroidApp" element={<AndroidApp />} />
   <Route exact path="/ButtonOn" element={<ButtonOn />} />
+  <Route exact path="/AppButton" element={<AppButton />} />
+  <Route exact path="/Input" element={<Input />} />
+  <Route exact path="/Getapppage" element={<Getapppage />} />
 
-  
 </Routes>
 
 <Footer/>
