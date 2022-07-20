@@ -3,7 +3,6 @@ import {
     Flex,
     Text,
     IconButton,
-    leftIcon,
     Stack,
     Collapse,
     Icon,
@@ -14,18 +13,19 @@ import {
     useColorModeValue,
 
     useDisclosure,
-    Container,
+
     Image,
+  
   } from '@chakra-ui/react';
-  import {EmailIcon } from '@chakra-ui/icons';
+
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-// import IosApp from './IosApp';
-// import AndroidApp from './AndroidApp';
+// import ButtonOn from './ButtonOn';
+import AppButton from './AppButton';
 import ButtonOn from './ButtonOn';
 
   
@@ -41,19 +41,20 @@ import ButtonOn from './ButtonOn';
         <Flex
           bg={useColorModeValue('gray.100', 'gray.800')}
           color={useColorModeValue('white.600', 'pink.300')}
-          minH={'80px'}
+          minH={'60px'}
           py={{ base: 4 }}
           px={{ base: 4 }}
           w={'full'}
           position={'fixed'}
           zIndex={99}
-   
+           
           borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}>
-            <Container maxW={'7xl'} zIndex={10} position={'relative'}>
+          align={'flex-start'}
+          >
+        {/* <Container maxW={'7xl'} zIndex={10} position={'relative'}> */}
           <Flex
             flex={{ base: 1, md: 'auto' }}
-            ml={{ base: -2 }}
+            ml={{ base:-4 }}
             display={{ base: 'flex', md: 'none' }}>
             <IconButton
               onClick={onToggle}
@@ -65,12 +66,8 @@ import ButtonOn from './ButtonOn';
            
             />
           </Flex>
-          <Flex >
-            <Text
-              // textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              fontWeight={1000}
-              color={useColorModeValue('white', 'white')}>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+          
               <Link to='/' >
               <Image
             width={150}
@@ -82,41 +79,40 @@ import ButtonOn from './ButtonOn';
           />
        
               </Link>
-            </Text>
+
   
   
-            <Flex display={{ base: 'none', md: 'flex' }} ml={40}  style={{color:'ActiveCaption'}} >
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10}  style={{color:'#a6def'}} >
               <DesktopNav />
             </Flex>
           </Flex>
-          </Container>
+          {/* </Container> */}
           <Stack
             flex={{ base: 1, md: 0 }}
-            justify={'flex-end'}
+            justify={'center'}
             // justify={'flex-start'}
             direction={'row'}
-            spacing={10}
+            spacing={3}
+          //  align={'flex-start'}
+      display={{base:'none',md:'inline-flex'}}
             >
-              <ButtonOn  name="Download ios App Store" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8" />
-              <ButtonOn leftIcon={<EmailIcon />} name="Get on Goole Play" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8"/>
-             
-          
-             {/* <IosApp/> */}
-            {/* </Button> */}
-            {/* <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'m'}
-              fontWeight={600}
-              color={'white'}
-              as={'a'}
-              bg={'pink.400'}
-              href={'/SignUpPage'}
-              _hover={{
-                bg: 'gray.500',
-              }}> */}
-             {/* <AndroidApp/> */}
-            {/* </Button> */}
+             <AppButton src="https://res.cloudinary.com/mabhi8251/image/upload/v1658300288/Gloitel-fitness/apple_1_rxix4f.png" name="Download ios store" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8"/>
+             <AppButton src="https://res.cloudinary.com/mabhi8251/image/upload/v1658299971/Gloitel-fitness/google-play_watgwk.png" name="Get on Goole Play" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8"/>
           </Stack>
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={'center'}
+            // justify={'flex-start'}
+            direction={'row'}
+            spacing={3}
+            marginLeft={19}
+            marginRight={-10}
+          //  align={'flex-start'}
+      display={{base:'1',md:'none'}}
+            >
+            <ButtonOn name="Get App" link='/Getapppage' />
+          </Stack>
+          
         </Flex>
      
         <Collapse in={isOpen} animateOpacity>
@@ -128,12 +124,12 @@ import ButtonOn from './ButtonOn';
   }
   
   const DesktopNav = () => {
-    const linkColor = useColorModeValue('white.600', 'white.500');
-    const linkHoverColor = useColorModeValue('white.500', 'white.500');
+    const linkColor = useColorModeValue('#000', 'pink.500');
+    const linkHoverColor = useColorModeValue('gray.500', 'pink.500');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Stack direction={'row'} spacing={4}>
+      <Stack direction={'row'} spacing={2}>
         {NAV_ITEMS.map((navItem) => (
           <Box key={navItem.label}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -141,8 +137,8 @@ import ButtonOn from './ButtonOn';
                 <Link
                   p={2}
                   href={navItem.href ?? '#'}
-                  fontSize={'l'}
-                  fontWeight={1000}
+                  fontSize={22}
+                  fontWeight={800}
                   color={linkColor}
                   _hover={{
                     textDecoration: 'none',
@@ -174,7 +170,7 @@ import ButtonOn from './ButtonOn';
     );
   };
   
-  const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+  const DesktopSubNav = ({ label, href, subLabel }) => {
     return (
       <Link
         href={href}
@@ -223,7 +219,7 @@ import ButtonOn from './ButtonOn';
     );
   };
   
-  const MobileNavItem = ({ label, children, href }: NavItem) => {
+  const MobileNavItem = ({ label, children, href }) => {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
@@ -284,18 +280,18 @@ import ButtonOn from './ButtonOn';
     {
       label: 'Home',
       href: '/',
-      children: [
-        {
-          label: 'Cources',
-          subLabel: 'Trending Design to inspire you',
-          href: '/Cources',
-        },
-        {
-          label: 'Pricing',
-          subLabel: 'Up-and-coming Designers',
-          href: '/Pricing',
-        },
-      ],
+      // children: [
+      //   {
+      //     label: 'Cources',
+      //     subLabel: 'Trending Design to inspire you',
+      //     href: '/Cources',
+      //   },
+      //   {
+      //     label: 'Pricing',
+      //     subLabel: 'Up-and-coming Designers',
+      //     href: '/Pricing',
+      //   },
+      // ],
     },
     {
       label: 'Yoga Instruction',

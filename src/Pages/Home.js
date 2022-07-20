@@ -9,47 +9,45 @@ import {
   Container,
   Box,
   Heading,
-  Icon,
+
   SimpleGrid,
-  useColorModeValue,
-  StackDivider,
+
 
   Image,
-
+Center,
 
 } from '@chakra-ui/react';
-import {
-  IoAnalyticsSharp,
-  IoLogoBitcoin,
-  IoSearchSharp,
-} from 'react-icons/io5';
+
 import ButtonOn from '../component/ButtonOn';
+import Trainers from './Trainers';
+
+
 
  
 
-interface FeatureProps {
-  text: string;
-  iconBg: string;
-  icon?: ReactElement;
-}
+// interface FeatureProps {
+//   text: string;
+//   iconBg: string;
+//   icon?: ReactElement;
+// }
 
 
-const Feature = ({ text, icon, iconBg }: FeatureProps) => {
-  return (
-    <Stack direction={'row'} align={'center'}>
-      <Flex
-        w={8}
-        h={8}
-        align={'center'}
-        justify={'center'}
-        rounded={'full'}
-        bg={iconBg}>
-        {icon}
-      </Flex>
-      <Text fontWeight={600}>{text}</Text>
-    </Stack>
-  );
-};
+// const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+//   return (
+//     <Stack direction={'row'} align={'center'}>
+//       <Flex
+//         w={8}
+//         h={8}
+//         align={'center'}
+//         justify={'center'}
+//         rounded={'full'}
+//         bg={iconBg}>
+//         {icon}
+//       </Flex>
+//       <Text fontWeight={600}>{text}</Text>
+//     </Stack>
+//   );
+// };
 
 const StatsText = ({ children }: { children: ReactNode }) => (
   <Text as={'span'} fontWeight={700} color={'white'}>
@@ -59,7 +57,24 @@ const StatsText = ({ children }: { children: ReactNode }) => (
 
 export default function Home() {
 
-
+  const data =[
+    {
+      image :"https://res.cloudinary.com/mabhi8251/image/upload/v1658309733/Gloitel-fitness/family_peencx.png",
+      text:" Lorem ipsum dolor sit amet, consetetur "
+    },
+    {
+      image :"https://res.cloudinary.com/mabhi8251/image/upload/v1658309752/Gloitel-fitness/siblings_kynmxh.png",
+      text:" Lorem ipsum dolor sit amet, consetetur "
+    },
+    {
+      image :"https://res.cloudinary.com/mabhi8251/image/upload/v1658309772/Gloitel-fitness/gymnastics_opatjo.png",
+      text:" Lorem ipsum dolor sit amet, consetetur "
+    },
+    {
+      image :"https://res.cloudinary.com/mabhi8251/image/upload/v1658309787/Gloitel-fitness/plan_qdieqw.png",
+      text:" Lorem ipsum dolor sit amet, consetetur "
+    },
+  ]
 
   const stats = [
     {
@@ -157,8 +172,40 @@ export default function Home() {
         />
       </Flex>
     </Stack>
- 
-
+    <Center py={5} display={{base:"none",md:"inline-flex"}}>
+      {
+        data.map((item)=>
+      <Box
+        maxW={'350px'}
+        w={'full'}
+        bg={'gray.100'}
+    
+        boxShadow={'3xl'}
+        rounded={'md'}
+        p={15}
+        margin={5}
+        borderRadius={10}
+        // overflow={'hidden'}
+        >
+        <Box
+          mb={6}
+          pos={'relative'}>
+          <Image
+            src={
+              item.image
+            }
+            layout={'fill'}
+          />
+        </Box>
+        <Stack>
+          <Text color={'gray.800'}>
+            {item.text}
+          </Text>
+        </Stack>
+      </Box>
+        )}
+    </Center>
+<Trainers/>
 <Container maxW={'3xl'}>
 <Stack
   as={Box}
@@ -185,7 +232,7 @@ export default function Home() {
     align={'center'}
     alignSelf={'center'}
     position={'relative'}>
-    <Button
+    {/* <Button
       colorScheme={'green'}
       bg={'green.400'}
       rounded={'full'}
@@ -194,8 +241,9 @@ export default function Home() {
         bg: 'green.500',
       }}>
       Get Started
-    </Button>
-    <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
+    </Button> */}
+    <ButtonOn name='Get started' link='/Cources' />
+    <Button variant={'link'} colorScheme={'green.500'} size={'sm'}>
       Learn more
     </Button>
     <Box>
@@ -220,7 +268,8 @@ export default function Home() {
   </Stack>
 </Stack>
 </Container>
-<Container maxW={'5xl'} py={12}>
+
+{/* <Container maxW={'5xl'} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           <Text
@@ -305,7 +354,7 @@ export default function Home() {
         />
       </SimpleGrid>
     </Box>
-    </Container>
+    </Container> */}
     <Box bg={'gray.800'} position={'relative'}>
       <Flex
         flex={1}
