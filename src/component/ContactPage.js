@@ -1,6 +1,6 @@
 import {
     Box,
-    Button,
+ 
     Flex,
     FormControl,
     FormLabel,
@@ -20,6 +20,7 @@ import {
   import React from 'react';
   import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
   import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+import ButtonOn from './ButtonOn';
   
   const confetti = {
     light: {
@@ -173,16 +174,17 @@ import {
                       />
                     </FormControl>
   
-                    <Button
+                    {/* <Button
                       colorScheme="blue"
                       bg="blue.400"
                       color="white"
                       _hover={{
                         bg: 'blue.500',
                       }}
-                      isFullWidth>
-                      Send Message
-                    </Button>
+                      isFullWidth> */}
+                        <ButtonOn name="Send Message" link="/"/>
+                      {/* Send Message */}
+                    {/* </Button> */}
                   </VStack>
                 </Box>
               </Stack>
