@@ -97,7 +97,7 @@ import ButtonOn from './ButtonOn';
             direction={'row'}
             spacing={10}
             >
-              <ButtonOn  name="Download App Store" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8" />
+              <ButtonOn  name="Download ios App Store" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8" />
               <ButtonOn leftIcon={<EmailIcon />} name="Get on Goole Play" link="https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8"/>
              
           
