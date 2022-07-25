@@ -55,7 +55,7 @@ export default function Footer() {
             <Box>
               {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
               <Text fontFamily={'heading'} color={useColorModeValue('black', 'white')}>
-                FITNESS 
+                FITNESS
               </Text>
             </Box>
             <Container maxW={'2xl'}>
@@ -77,7 +77,7 @@ export default function Footer() {
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Get Involved</ListHeader>
-            <Link href={'/Cources'}>Cources</Link>
+            <Link href={'/CarrerPage'}>Carrer</Link>
             <Link href={'/Pricing'}>Pricing</Link>
             <Link href={'/Trainers'}>Touch with Trainer</Link>
             <Link href={'#'}>Partner with us</Link>
