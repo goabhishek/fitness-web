@@ -61,7 +61,7 @@ export default function SignInPage() {
             <Text as={'span'} bgGradient='linear(to-r, red.400,pink.400)' bgClip='text'>
               &
             </Text>{' '}
-            whenever you want across any of our 5,500+ partner gyms and fitness
+            5,500+ partner gyms and fitness
           </Heading>
           <Stack direction={'row'} spacing={4} align={'center'}>
             <AvatarGroup>
