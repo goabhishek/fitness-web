@@ -21,6 +21,7 @@ import ButtonOn from './component/ButtonOn';
 import AppButton from './component/AppButton';
 import Input from './component/Input';
 import Getapppage from './component/Getapppage';
+import CarrerPage from './Pages/CarrerPage';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route exact path='/AppButton' element={<AppButton />} />
         <Route exact path='/Input' element={<Input />} />
         <Route exact path='/Getapppage' element={<Getapppage />} />
+        <Route exact path='/CarrerPage' element={<CarrerPage />} />
       </Routes>
 
       <Footer />
