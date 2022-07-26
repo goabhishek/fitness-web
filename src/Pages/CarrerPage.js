@@ -42,7 +42,7 @@ export const theme = extendTheme({
               left: 0,
               zIndex: 2,
               position: 'absolute',
-              backgroundColor: 'white',
+              backgroundColor: 'blackAlpha.100',
               pointerEvents: 'none',
               mx: 3,
               px: 1,
@@ -85,13 +85,13 @@ const CarrerPage = () => {
                   md: '3xl',
                 }}
               >
-                Primary point of contact
+                Contact Us
               </FormLabel>
-              <Box p={8}>
+              <Box p={3}>
                 <FormControl variant='floating' id='first-name' isRequired isInvalid>
                   <Input placeholder=' ' />
 
-                  <FormLabel opacity={'0.8'}>Full Name</FormLabel>
+                  <FormLabel opacity={'1.5'}>Full Name</FormLabel>
                 </FormControl>
                 <FormControl isRequired isInvalid pt={10}>
                   <Select placeholder='Select Post'>
@@ -106,32 +106,24 @@ const CarrerPage = () => {
 
                   <FormControl variant='floating' id='website link' isRequired isInvalid paddingRight={4}>
                     <Input placeholder=' ' />
-                    <FormLabel opacity={'0.8'}>Mobile Number</FormLabel>
+                    <FormLabel opacity={'1.5'}>Mobile Number</FormLabel>
                   </FormControl>
                   <FormControl variant='floating' id='website link' isRequired isInvalid>
                     <Input placeholder=' ' />
-                    <FormLabel opacity={'0.8'}>E-mail</FormLabel>
+                    <FormLabel opacity={'1.5'}>E-mail</FormLabel>
                   </FormControl>
                 </InputGroup>
-                <FormLabel
-                  fontSize={{
-                    base: '1xl',
-                    md: '2xl',
-                  }}
-                >
-                  Anything you would like for us to know?
-                </FormLabel>
 
                 <FormControl variant='floating' id='website link' isRequired isInvalid>
                   <Input placeholder=' ' height={150} />
-                  <FormLabel opacity={'0.8'}>Write details here </FormLabel>
+                  <FormLabel opacity={'1.5'}>Write details here </FormLabel>
                 </FormControl>
               </Box>
               <ButtonOn name='Submit Here' link='/' />
             </ChakraProvider>
           </Stack>
         </Container>
-        <Container maxW={'2xl'} bg={'blackAlpha.900'}>
+        <Container maxW={'2xl'} bg={'blackAlpha.900'} display={{ base: 'none', md: 'block' }}>
           <Stack align={'flex-start'} m={5}>
             <Image
               width={350}
